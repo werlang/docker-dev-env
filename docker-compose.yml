@@ -1,13 +1,13 @@
 version: '3'
 services:
     mysql:
+        env_file:
+            - .env
         image: mysql:8.0
         restart: always
         environment:
             - MYSQL_DATABASE=${MYSQL_DATABASE}
             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-        env_file:
-            - .env
         ports:
             - '127.0.0.1:3306:3306'
         volumes:
