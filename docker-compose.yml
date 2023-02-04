@@ -6,8 +6,8 @@ services:
         image: mysql:8.0
         restart: always
         environment:
-            - MYSQL_DATABASE=${MYSQL_DATABASE}
-            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - MYSQL_DATABASE=aula
+            - MYSQL_ROOT_PASSWORD=asdf1234
         ports:
             - '127.0.0.1:3306:3306'
         volumes:
