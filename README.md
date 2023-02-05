@@ -8,21 +8,22 @@ Este repositório tem como objetivo auxiliar os alunos da disciplina de Programa
 
 - [Git](https://git-scm.com/downloads)
 - [Docker](https://docs.docker.com/get-docker/)
-- [WSL2](https://docs.microsoft.com/pt-br/windows/wsl/install-win10) (Windows)
+- [WSL2](https://docs.microsoft.com/pt-br/windows/wsl/install-win10)
+- [Ubuntu](https://www.microsoft.com/pt-br/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab), ou qualquer outra distribuição para o WSL
 - [VSCode](https://code.visualstudio.com/download)
-- [Docker Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) (VSCode)
 - [WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) (VSCode)
+- [Docker Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) (VSCode)
 
 ## Como usar (primeiros passos)
 
-1. Abra o VSCode na aba *Remote Explorer* e clique em *Connect to WSL*.
+1. Abra o VSCode na aba *Remote Explorer* e clique em *Connect to WSL*. **OBS**: Vc precisa já ter instalado todos os pré-requisitos acima.
 
 ![image](https://user-images.githubusercontent.com/19828711/216797795-fbf7f734-d3b4-4213-9363-c238738c5ec9.png)
 
 2. Abra o terminal do VSCode e clone este repositório (subsitua `aula` pelo nome do seu projeto).
     
 ```bash
-git clone https://github.com/werlang/docker-dev-env.git /home/aula
+git clone https://github.com/werlang/docker-dev-env.git aula
 ```
 
 3. Vá em *Open Folder* e selecione a pasta do projeto.
