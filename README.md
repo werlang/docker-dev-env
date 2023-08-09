@@ -2,45 +2,34 @@
 
 ## Objetivo
 
-Este repositório tem como objetivo auxiliar os alunos da disciplina de Programação Web a configurar um ambiente de desenvolvimento com Docker.
+Este repositório tem como objetivo apresentar uma solução de ambiente de desenvolvimento web simples utilizando Docker e auxiliar em sua configuração.
 
 ## Pré-requisitos
 
-- [Git](https://git-scm.com/downloads)
-- [Docker](https://docs.docker.com/get-docker/)
+- [VSCode](https://code.visualstudio.com/download)
+- [Git](https://git-scm.com/downloads) (Normalmente vem junto co VSCode)
+- [Docker](https://docs.docker.com/get-docker/) (Docker Desktop)
 - [WSL2](https://docs.microsoft.com/pt-br/windows/wsl/install-win10)
 - [Ubuntu](https://www.microsoft.com/pt-br/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab), ou qualquer outra distribuição para o WSL
-- [VSCode](https://code.visualstudio.com/download)
-- [WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) (VSCode)
 - [Docker Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) (VSCode)
 
 ## Como usar (primeiros passos)
 
-1. Abra o VSCode na aba *Remote Explorer* e clique em *Connect to WSL*. **OBS**: Vc precisa já ter instalado todos os pré-requisitos acima.
+1. Abra seu diretório de interesse usando o VSCode (File > Open Folder). Este será seu _workspace_.
 
-![image](https://user-images.githubusercontent.com/19828711/216797795-fbf7f734-d3b4-4213-9363-c238738c5ec9.png)
+2. Copie os arquivos `docker-compose.yml` e `.env.example` deste repositório para dentro do diretório. Renomeie o arquivo `.env.example` para `.env`.
 
-2. Abra o terminal do VSCode e clone este repositório (subsitua `aula` pelo nome do seu projeto).
-    
-```bash
-git clone https://github.com/werlang/docker-dev-env.git aula
-```
-
-3. Vá em *Open Folder* e selecione a pasta do projeto.
-
-![image](https://user-images.githubusercontent.com/19828711/216797921-6b6389e2-c98d-495d-9230-8599dbe4ddac.png)
-
-4. Certifique-se de que o *Docker Desktop* está rodando, e que a extensão do *Docker* está instalada no VSCode. Então clique com o botão direito no arquivo `docker-compose.yml` e selecione *Compose Up*.
+3. Certifique-se de que o *Docker Desktop* está rodando, e que a extensão do *Docker* está instalada no VSCode. Então clique com o botão direito no arquivo `docker-compose.yml` e selecione *Compose Up*.
 
 ![image](https://user-images.githubusercontent.com/19828711/216797989-beab99de-ca1e-47da-a729-c07ae3bda961.png)
 
-5. Aguarde o Docker baixar as imagens e criar os containers. Quando terminar, você verá que o ambiente já está configurado e rodando.
+3. Aguarde o Docker baixar as imagens e criar os containers. Quando terminar, você verá que o ambiente já está configurado e rodando.
 
 ![image](https://user-images.githubusercontent.com/19828711/216798129-8158d388-251f-4de2-b8a3-43f9f21fce73.png)
 
-4. A pasta do Apache foi criada em `./app`. Tudo que você colocar nessa pasta será acessível pelo `http://localhost`.
+4. A pasta do Apache foi mapeada para este mesmo diretório que você está (o seu _workspace_). Tudo que você colocar nessa pasta será acessível pelo `http://localhost:8080`. A porta pode ser alterada no arquivo `.env`.
 
-![image](https://user-images.githubusercontent.com/19828711/216796461-3c1d8cf8-9d8a-422f-a511-c15418d29a7b.png)
+![image](https://github.com/werlang/docker-dev-env/assets/19828711/1399bf34-a2e8-4e15-8c4c-539525bfb634)
 
 6. Quando você terminar de usar o ambiente, você pode parar os containers clicando com o botão direito no arquivo `docker-compose.yml` e selecionar *Compose Down*.
 
@@ -49,18 +38,25 @@ git clone https://github.com/werlang/docker-dev-env.git aula
 O banco de dados MySQL já está configurado com as seguintes credenciais:
 
 - Host: `localhost`
-- Porta: `3306`
+- Porta: `3310`
 - Usuário: `root`
 - Senha: `asdf1234`
 - Banco de dados: `aula`
 
-Caso você queira alterar o *nome do banco de dados* ou *senha*, você pode alterá-los no arquivo `docker-compose.yml`. 
+## Arquivo .env
 
-![image](https://user-images.githubusercontent.com/19828711/216798248-e05fd131-ee86-46ba-90ff-6a39ca6ef766.png)
+O arquivo `.env` contém algumas configurações que você pode querer alterar dependendo do ambiente que você estiver executando os serviços apache e mysql.
+
+```bash
+MYSQL_DATABASE=aula
+MYSQL_PASSWORD=asdf1234
+MYSQL_PORT=3310
+APACHE_PORT=8080
+```
 
 Após a alteração, você deve parar e iniciar os containers novamente (processo descrito no tópico anterior).
 
-Para acessar o banco de dados, você pode usar o *MySQL Workbench* ou o *DBeaver* com as credenciais acima.
+Para acessar o banco de dados, você pode usar o *MySQL Workbench*, *DBeaver* ou qualquer ferramenta de gerenciamento de BD com as credenciais acima.
 
 ## Composer
 
