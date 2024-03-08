@@ -27,7 +27,7 @@ Este repositório tem como objetivo apresentar uma solução de ambiente de dese
 
 ![image](https://user-images.githubusercontent.com/19828711/216798129-8158d388-251f-4de2-b8a3-43f9f21fce73.png)
 
-4. A pasta do Apache foi mapeada para este mesmo diretório que você está (o seu _workspace_). Tudo que você colocar nessa pasta será acessível pelo `http://localhost:8080`. A porta pode ser alterada no arquivo `.env`.
+4. A pasta do Apache foi mapeada para o diretório _public_ . Tudo que você colocar nessa pasta será acessível pelo `http://localhost:8080`. A porta pode ser alterada no arquivo `.env`.
 
 ![image](https://github.com/werlang/docker-dev-env/assets/19828711/1399bf34-a2e8-4e15-8c4c-539525bfb634)
 
