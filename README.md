@@ -16,7 +16,7 @@ Este repositório tem como objetivo apresentar uma solução de ambiente de dese
 
 1. Abra seu diretório de interesse usando o VSCode (File > Open Folder). Este será seu _workspace_.
 
-2. Copie os arquivos `compose.yaml` e `.env.example` deste repositório para dentro do diretório.
+2. Copie os arquivos `compose.yaml` e `.env.example` deste repositório para dentro do diretório. Caso você queira executar com as configurações básicas, só é necessário copiar o arquivo `compose.yaml`.
 
 3. Certifique-se de que o *Docker Desktop* está rodando, e que a extensão do *Docker* está instalada no VSCode. Então clique com o botão direito no arquivo `compose.yaml` e selecione *Compose Up*.
 
