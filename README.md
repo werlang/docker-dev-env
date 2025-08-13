@@ -7,10 +7,12 @@ Este repositório tem como objetivo apresentar uma solução de ambiente de dese
 ## Pré-requisitos
 
 - [VSCode](https://code.visualstudio.com/download)
-- [Git](https://git-scm.com/downloads) (Normalmente vem junto co VSCode)
+- [Git](https://git-scm.com/downloads) (Normalmente vem junto com o VSCode)
 - [Docker](https://docs.docker.com/get-docker/) (Docker Desktop)
 - [WSL2](https://docs.microsoft.com/pt-br/windows/wsl/install-win10)
 - [Docker Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) (Extensão do VSCode)
+
+É também recomendável que você utilize um computador com pelo menos 8GB de RAM para um desempenho ideal.
 
 ## Como usar (primeiros passos)
 
